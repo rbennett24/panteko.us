@@ -1,0 +1,5 @@
+### (2009) VARIETIES OF DISTRIBUTIVITY: "ONE BY ONE" VS. "EACH" ###
+
+Semantics and Linguistic Theory 19. doi: [10.3765/salt.v19i0.2538](http://dx.doi.org/10.3765/salt.v19i0.2538). With Adrian Brasoveanu
+
+The main goal of the paper is to argue that distributive quantificational dependencies in natural language can be established in two different ways: (i) by encapsulating quantification into functions storing quantificational dependencies as a whole, needed to account for one by one-based distributive sentences like The boys recited "The Raven" one by one -- and (ii) by decomposing quantification in such a way that each n-tuple of quantificationally dependent entities is individually stored in a variable assignment and quantifiers are interpreted relative to the entire set of variables assignments that stores quantificational dependencies in this pointwise, assignment-wise manner needed to account for each-based distributive sentences like The boys each recited a different poem.

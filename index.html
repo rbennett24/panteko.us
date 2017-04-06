@@ -1,3 +1,18 @@
+<%
+  import glob
+  import markdown
+  import codecs
+  markdowns = sorted(glob.glob("resources/Updates/*.md"), reverse=True)
+
+  def markdownToHTML(file):
+    f = codecs.open(file, mode="r", encoding="utf-8")
+    text = f.read()
+    html = markdown.markdown(text)
+    f.close()
+    return html
+%>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -50,6 +65,12 @@
         <h1>The Uspanteko Phonetics and Prosodic Phonology Project (UPPPP!)</h1>
         <p class="lead">The UPPPP! project is focused on documenting and describing the phonetics and phonology of the Mayan language Uspanteko, as well as developing corpora and computational resources to further this task.</p>
       </div>
+
+      % for i in markdowns:
+        <div class="container">
+        ${markdownToHTML(i)}
+        </div>
+      % endfor
 
     </div><!-- /.container -->
 
