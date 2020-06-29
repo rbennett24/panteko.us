@@ -1,0 +1,108 @@
+<%
+  import glob
+  import markdown
+  import codecs
+  markdowns = sorted(glob.glob("resources/Updates/*.md"), reverse=True)
+
+  def markdownToHTML(file):
+    f = codecs.open(file, mode="r", encoding="utf-8")
+    text = f.read()
+    html = markdown.markdown(text)
+    f.close()
+    return html
+%>
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Uspanteko Phonetics and Prosodic Phonology Project</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="starter-template.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">UPPPP!</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <!-- <li class="active"><a href="#">Home</a></li>-->
+	    <li><a href="resources.html">Resources</a></li>
+	    <li><a href="#publications">Publications</a></li>
+            <li><a href="team.html">Team Tz'&uacute;nun</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-block">
+        <h3 class="card-title">Archived Materials</h3>
+        <p class="card-text">
+         <a href="https://www.ailla.utexas.org/islandora/object/ailla%3A254558" target="_top"><b>Uspanteko Collection of Ryan Bennett and Robert Henderson</b></a><br>
+         Currently embargoed, though please email Robert or Ryan for special AILLA access.<br>
+         <!-- <a href="https://campuspress.yale.edu/ryanbennett/" target="_top">Website</a> -->
+        </p>
+      </div>
+      <div class="card-block">
+        <h3 class="card-title">Workshop Materials</h3>
+        <p class="card-text">
+         <a href="phonetics.html" target="_top"><b>Workshop on Practical Phonetics</b></a><br>
+         Materials from the 2016 workshop on practical phonetics at Universidad del Valle-Sololá.<br>
+         <!-- <a href="https://campuspress.yale.edu/ryanbennett/" target="_top">Website</a> -->
+        </p>
+        <p class="card-text">
+         <a href="resources/pdfs/workshop2/Taller_corpus_archivos_compartidos.zip" target="_top"><b>Workshop on ELAN</b></a> (zip download)<br>
+         Materials from the 2018 workshop on ELAN at the Comunidad Lingüística Uspanteka.<br>
+         <!-- <a href="https://campuspress.yale.edu/ryanbennett/" target="_top">Website</a> -->
+        </p>
+        <p class="card-text">
+         <a href="resources/pdfs/workshop3/taller_tpr.zip" target="_top"><b>Workshop on TPR</b></a> (zip download)<br>
+         Materials from the 2019 workshop on Total Physical Response at the Comunidad Lingüística Uspanteka.<br>
+         <!-- <a href="https://campuspress.yale.edu/ryanbennett/" target="_top">Website</a> -->
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
