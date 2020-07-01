@@ -1,18 +1,3 @@
-<%
-  import glob
-  import markdown
-  import codecs
-  markdowns = sorted(glob.glob("resources/Updates/*.md"), reverse=True)
-
-  def markdownToHTML(file):
-    f = codecs.open(file, mode="r", encoding="utf-8")
-    text = f.read()
-    html = markdown.markdown(text)
-    f.close()
-    return html
-%>
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -31,6 +16,8 @@
 
     <!-- Custom styles for this template -->
     <link href="starter-template.css" rel="stylesheet">
+
+    <link href="css/leipzig.css" rel="stylesheet">
 
   </head>
 
@@ -59,42 +46,34 @@
     </nav>
 
     <div class="container">
-
+<h1><%include file="resources/Texts/xoqoneb/xoqoneb_title.html"/></h1><h4>relató por <%include file="resources/Texts/xoqoneb/xoqoneb_author.html"/></h3>
 <div class="row">
+  <div class="col-sm-3">
+    <div class="card">
+      <div class="card-block">
+        <h3 class="card-title">Uspanteko</h3>
+        <p class="card-text">
+        <%include file="resources/Texts/xoqoneb/xoqoneb_l1.html"/>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card">
+      <div class="card-block">
+        <h3 class="card-title">Español</h3>
+        <p class="card-text">
+        <%include file="resources/Texts/xoqoneb/xoqoneb_l2.html"/>
+        </p>
+      </div>
+    </div>
+  </div>
   <div class="col-sm-6">
     <div class="card">
       <div class="card-block">
-        <h3 class="card-title">Archived Materials</h3>
+        <h3 class="card-title">Glosas</h3>
         <p class="card-text">
-         <a href="https://www.ailla.utexas.org/islandora/object/ailla%3A254558" target="_top"><b>Uspanteko Collection of Ryan Bennett and Robert Henderson</b></a><br>
-         Currently embargoed, though please email Robert or Ryan for special AILLA access.<br>
-         <!-- <a href="https://campuspress.yale.edu/ryanbennett/" target="_top">Website</a> -->
-        </p>
-      </div>
-      <div class="card-block">
-        <h3 class="card-title">Workshop Materials</h3>
-        <p class="card-text">
-         <a href="phonetics.html" target="_top"><b>Workshop on Practical Phonetics</b></a><br>
-         Materials from the 2016 workshop on practical phonetics at Universidad del Valle-Sololá.<br>
-         <!-- <a href="https://campuspress.yale.edu/ryanbennett/" target="_top">Website</a> -->
-        </p>
-        <p class="card-text">
-         <a href="resources/pdfs/workshop2/Taller_corpus_archivos_compartidos.zip" target="_top"><b>Workshop on ELAN</b></a> (zip download)<br>
-         Materials from the 2018 workshop on ELAN at the Comunidad Lingüística Uspanteka.<br>
-         <!-- <a href="https://campuspress.yale.edu/ryanbennett/" target="_top">Website</a> -->
-        </p>
-        <p class="card-text">
-         <a href="resources/pdfs/workshop3/taller_tpr.zip" target="_top"><b>Workshop on TPR</b></a> (zip download)<br>
-         Materials from the 2019 workshop on Total Physical Response at the Comunidad Lingüística Uspanteka.<br>
-         <!-- <a href="https://campuspress.yale.edu/ryanbennett/" target="_top">Website</a> -->
-        </p>
-      </div>
-      <div class="card-block">
-        <h3 class="card-title">Online Uspanteko Texts</h3>
-        <p class="card-text">
-         <a href="xoqoneb.html" target="_top"><b>Xoqoneb'</b></a><br>
-         An encounter between an Uspanteko man and the supernatural lord of the hill Xoqoneb’.<br>
-         <!-- <a href="https://campuspress.yale.edu/ryanbennett/" target="_top">Website</a> -->
+        <%include file="resources/Texts/xoqoneb/xoqoneb_gls.html"/>
         </p>
       </div>
     </div>
