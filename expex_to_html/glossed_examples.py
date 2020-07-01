@@ -1,6 +1,7 @@
 import re
 
-gloss_div = """<div data-gloss>
+gloss_div = """<li></li>
+<div data-gloss>
 	<p>{l1}</p>
 	<p>{gls}</p>
 	<p>{l2}</p>
@@ -11,7 +12,9 @@ html = """<html>
 		<link rel="stylesheet" href="leipzig.js/dist/leipzig.css">
 	</head>
 	<body>
+		<ol>
 		{exs}
+		</ol>
 		<script src="leipzig.js/dist/leipzig.js"></script>
     	<script>
     		document.addEventListener('DOMContentLoaded', function(){{
